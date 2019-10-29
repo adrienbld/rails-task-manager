@@ -7,16 +7,16 @@
         <%= link_to task.title, show_path(task) %>
         <%= link_to delete_path(task),
       method: :delete,
-      data: { confirm: "Are you sure?" } do %>
-        <i class="fas fa-trash"></i>
+      data: { confirm: "Are you sure?" } %>
+        <%= icon(‘fas’, ‘square’)%>
         <% end %>
     </p>
   <% else %>
     <p>
       <input type="checkbox" name="vehicle1" value="Bike">
       <%= link_to task.title, show_path(task) %>
-      <%= link_to delete_path(task), method: :delete, data: { confirm: "Are you sure?" } do %>
-        <i class="fas fa-trash"></i>
+      <%= link_to delete_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
+        <%= icon(‘fas’, ‘square’)%>
    <% end %>
     </p>
   <% end %>
